@@ -43,7 +43,7 @@ class MainController extends Controller
             'firstName' => 'required|string|max:32|alpha:ascii',
             'lastName' => 'required|string|max:32|alpha:ascii',
             'dateOfBirth' => 'required|date|before:today',
-            'height' => 'required|integer|min:0',
+            'height' => 'nullable|integer|min:0',
         ]);
 
         $person = new Person();
