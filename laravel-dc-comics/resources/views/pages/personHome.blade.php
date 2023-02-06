@@ -19,8 +19,8 @@
                     <a class="border w-50 text-truncate" href="{{ route('person.Show', $person) }}">
                         {{ $person -> firstName}}
                     </a>
-                    <a class="border w-50 text-truncate" href="{{route('person.Edit', $person)}}">E</a>
-                    <a class="border w-50 text-truncate" href="{{route('person.Delete', $person)}}">x</a>
+                    <a class="border w-50 text-truncate text-muted" href="{{route('person.Edit', $person)}}">Edit</a>
+                    <a class="border w-50 text-truncate text-danger" href="{{route('person.Delete', $person)}}">Delete</a>
                 </li>
             @endforeach
 
