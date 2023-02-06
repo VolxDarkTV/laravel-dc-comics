@@ -6,7 +6,7 @@
                     <a class="btn btn-danger" href="/">Home</a>
                 </li>
                 <li>
-                    <h1 class="fw-bold text-center">Person Home</h1>
+                    <h1 class="fw-bold text-center">Person</h1>
                 </li>
                 <li>
                     <a class="btn btn-success" href="{{route('person.Create')}}" >Create</a>
