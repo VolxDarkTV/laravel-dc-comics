@@ -5,8 +5,20 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 
 Route::get('/', [MainController::class, 'personHome'])
-    -> name('personHome');
+    -> name('person.Home');
 
 // --- Show
 Route::get('/person/show{person}', [MainController::class, 'personShow'])
-    -> name('personShow');
+    -> name('person.Show');
+
+// Create
+Route::get('/person/create', [MainController::class, 'personCreate'])
+    -> name('person.Create');
+
+// Store
+Route::post('/person/store', [MainController::class, 'personStore'])
+    -> name('person.Store');
+
+// Delete
+Route::get('/person/delete{person}', [MainController::class, 'personDelete'])
+    -> name('person.Delete');

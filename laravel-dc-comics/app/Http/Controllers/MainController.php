@@ -17,6 +17,7 @@ class MainController extends Controller
         return view('pages.personHome', $data);
     }
 
+    // --- personShow
     public function personShow(Person $person){
 
         // $person = Person::find($id);
@@ -26,5 +27,36 @@ class MainController extends Controller
         // ];
 
         return view('pages.personShow', compact('person'));
+    }
+
+    // --- personCreate
+    public function personCreate(){
+
+        return view('pages.personCreate');
+    }
+
+    // --- personStore
+    public function personStore(Request $request){
+
+        $data = $request -> all();
+
+        $person = new Person();
+
+        $person -> firstName = $data['firstName'];
+        $person -> lastName = $data['lastName'];
+        $person -> dateOfBirth = $data['dateOfBirth'];
+        $person -> height = $data['height'];
+        
+        $person -> save();
+
+        return redirect() -> route('person.Home');
+    }
+
+     // --- personDelete
+     public function personDelete(Person $person){
+
+        $person -> delete();
+
+        return redirect() -> route('person.Home');
     }
 }
