@@ -68,4 +68,24 @@ class MainController extends Controller
         ];
         return view('pages.personEdit', $data);
     }
+
+    // --- personUpdate
+    public function personUpdate(Request $request, Person $person){
+
+        $data = $request -> all();
+
+        $person -> firstName = $data['firstName'];
+        $person -> lastName = $data['lastName'];
+        $person -> dateOfBirth = $data['dateOfBirth'];
+        $person -> height = $data['height'];
+        
+        $person -> save();
+
+        // add parameter Person
+        $data = [
+            'person' => $person
+        ];
+        return redirect() -> route('person.Show', $data);
+
+    }
 }

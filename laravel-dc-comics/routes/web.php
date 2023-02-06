@@ -27,3 +27,6 @@ Route::get('/person/delete{person}', [MainController::class, 'personDelete'])
 Route::get('/person/edit{person}', [MainController::class, 'personEdit'])
     -> name('person.Edit');
 
+// --- Update
+Route::post('/person/update{person}', [MainController::class, 'personUpdate'])
+    -> name('person.Update');

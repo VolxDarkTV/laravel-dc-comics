@@ -7,7 +7,7 @@
 @section('main')
     <h3>Update Person</h3>
 
-    <form method="POST" action="{{ route('person.Store') }}">
+    <form method="POST" action="{{ route('person.Update', $person) }}">
         @csrf
         <label for="firstName">Name</label>
         <input type="text" name="firstName" value="{{$person -> firstName}}">
