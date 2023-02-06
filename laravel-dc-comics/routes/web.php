@@ -11,14 +11,19 @@ Route::get('/', [MainController::class, 'personHome'])
 Route::get('/person/show{person}', [MainController::class, 'personShow'])
     -> name('person.Show');
 
-// Create
+// --- Create
 Route::get('/person/create', [MainController::class, 'personCreate'])
     -> name('person.Create');
 
-// Store
+// --- Store
 Route::post('/person/store', [MainController::class, 'personStore'])
     -> name('person.Store');
 
-// Delete
+// --- Delete
 Route::get('/person/delete{person}', [MainController::class, 'personDelete'])
     -> name('person.Delete');
+
+// --- Edit
+Route::get('/person/edit{person}', [MainController::class, 'personEdit'])
+    -> name('person.Edit');
+

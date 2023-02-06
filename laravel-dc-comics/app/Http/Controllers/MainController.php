@@ -59,4 +59,13 @@ class MainController extends Controller
 
         return redirect() -> route('person.Home');
     }
+
+    // --- personUpdate
+    public function personEdit(Person $person){
+
+        $data = [
+            'person' => $person
+        ];
+        return view('pages.personEdit', $data);
+    }
 }

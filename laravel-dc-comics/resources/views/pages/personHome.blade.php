@@ -12,7 +12,7 @@
             <a href="{{ route('person.Show', $person) }}">
                 {{ $person -> firstName}}
             </a>
-
+            <a href="{{route('person.Edit', $person)}}">E</a>
             <a href="{{route('person.Delete', $person)}}">x</a>
         </li>
     @endforeach
