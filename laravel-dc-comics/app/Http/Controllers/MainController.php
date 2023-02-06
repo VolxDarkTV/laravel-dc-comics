@@ -60,7 +60,7 @@ class MainController extends Controller
         return redirect() -> route('person.Home');
     }
 
-    // --- personUpdate
+    // --- personEdit
     public function personEdit(Person $person){
 
         $data = [
