@@ -40,12 +40,11 @@ class MainController extends Controller
 
         // $data = $request -> all();
         $data = $request -> validate([
-            'firstName' => 'required|string|max:32',
-            'lastName' => 'required|string|max:32',
+            'firstName' => 'required|string|max:32|alpha:ascii',
+            'lastName' => 'required|string|max:32|alpha:ascii',
             'dateOfBirth' => 'required|date|before:today',
             'height' => 'required|integer|min:0',
         ]);
-        dd($data);
 
         $person = new Person();
 
