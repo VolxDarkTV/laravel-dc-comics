@@ -8,6 +8,10 @@
     <h1>Person Home</h1>
 
     @foreach ($people as $person)
-        <h4>{{ $person -> firstName}}</h4>   
+        <li>
+            <a href="{{ route('personShow', $person) }}">
+                {{ $person -> firstName}}
+            </a>
+        </li>
     @endforeach
 @endsection
